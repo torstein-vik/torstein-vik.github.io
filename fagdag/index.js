@@ -63,39 +63,66 @@ function resolveOutput(){
     if (weeknum >= 0 && weeknum < weekSpec.length) {
         var week = weekSpec[weeknum];
 
-        var subject = "";
-        var room = "";
+        var data = resolveData(week);
+        
 
-        if (week === 0){
-            subject = "Ordinær timeplan";
-        } else if (week === -1) {
-            subject = "FRI! <img src='https://cdn.fbsbx.com/v/t59.2708-21/21742670_2095412270484868_2393354780345892864_n.gif?oh=840ad09608c9507db19af15ba367165f&oe=59D49F6B'>";
-        } else if (typeof week === 'number' && week >= 1 && week <= 4){
-            var data = personSpec[personname][week - 1];
-            if (data == 0) {
-                subject = "FRI! <img src='https://cdn.fbsbx.com/v/t59.2708-21/21742670_2095412270484868_2393354780345892864_n.gif?oh=840ad09608c9507db19af15ba367165f&oe=59D49F6B'>";
-            } else {
-                subject = data[0];
-                room    = data[1];
-            }
-        } else if (typeof week === 'number' && week >= 5 && week <= 6){
-            var data = commonSpec[week - 5];
-            if (data == 0) {
-                subject = "FRI! <img src='https://cdn.fbsbx.com/v/t59.2708-21/21742670_2095412270484868_2393354780345892864_n.gif?oh=840ad09608c9507db19af15ba367165f&oe=59D49F6B'>";
-            } else {
-                subject = data[0];
-                room    = data[1];
-            }
-        } else if (typeof week === 'string') {
-            subject = week;
-        } else {
-            alert("Systemfeil. Si det til Torstein.");
-        }
-
-        $("#subject").html(subject);
-        $("#room")   .html(room);
+        $("#subject").html(data[0]);
+        $("#room")   .html(data[1]);
     } else {
         $("#subject").html("Denne uken er ikke lagt til");
+    }
+}
+
+function resolveData(week) {
+        
+    if (week === 0){
+        return ["Ordinær timeplan", ""];
+    } 
+    
+    if (week === -1) {
+        return ['Fri!!', ""];
+    } 
+    
+    if (typeof week === 'number') {
+        return resolveNumber(week);
+    }
+    
+    if (typeof week === 'object') {
+        var d1 = resolveNumber(week[0]);
+        var d2 = resolveNumber(week[1]);
+        
+        if (d1[0] == 'Fri!!' && d2[0] == 'Fri!!'){
+            return d1;
+        } else if (d1[0] == 'Fri!!') {
+            return ["Fri til 10.55 & " + d2[0], d2[1]];
+        } else if (d2[0] == 'Fri!!') {
+            return [d1[0] + " & fri etter 10.30", d1[1]];
+        } else {
+            return [d1[0] + " & " + d2[0], d1[1] + " & " + d2[1]];
+        }
+    }
+    
+    if (typeof week === 'string') {
+        return [week, ""];
+    }
+    
+    alert("Systemfeil. Si det til Torstein.");
+    return ["", ""];
+    
+}
+
+function resolveNumber(week) {
+    
+    if (week >= 1 && week <= 4){
+        var data = personSpec[personname][week - 1];
+    } else {
+        var data = commonSpec[week - 5];
+    } 
+    
+    if (data == 0) {
+        return ['Fri!!', ""];
+    } else {
+        return data;
     }
 }
 
