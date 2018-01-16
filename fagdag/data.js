@@ -70,7 +70,7 @@ var personSpec = {
     'Henrik':   [['Kjemi 2', 'A429, A431'], ['Matematikk R2', 'B339'], 0, ['Fysikk 2', 'A439, A441']],
     'Håvard':   [['Kjemi 2', 'A429, A431'], ['Matematikk R2', 'B339'], 0, 0],
     'Sander':   [['Økonomistyring', 'A537'], ['Matematikk S2', 'A509'], ['Samføk. 2', 'A526'], 0],
-    'Emil':     [['Internasj. engelsk', 'A542'],0,0,['Fysikk 2', 'A439, A441']],
+    'Emil':     [0,0,0,['Fysikk 2', 'A439, A441']],
     'Ludvik':   [0,0,0,['Fysikk 2', 'A439, A441']],
     'Linda':    [0,['Matematikk R2', 'B339'], ['IT 2', 'A533'], 0],
     'Preben':   [0,['Kjemi 1', 'A429, A431'], ['IT 2', 'A533'], ['Fysikk 2', 'A439, A441']],
