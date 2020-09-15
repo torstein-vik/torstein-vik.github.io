@@ -1,0 +1,41 @@
+#mainCanvas {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 500;
+}
+
+body {
+  margin: 0px;
+  overflow:hidden;
+}
+
+#gamearea {
+    position: relative;
+}
+
+#ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+
+}
+
+#uipanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: black;
+    border-color: red;
+    border-width: medium;
+    border-style: solid;
+    pointer-events: all;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; 
+}
