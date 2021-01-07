@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Simple Simplification",
+        "expr": {
+            "type": "div",
+            "a": 1,
+            "b": {
+                "type": "div",
+                "a": 1,
+                "b": {
+                    "type": "add",
+                    "a": {
+                        "type": "pow",
+                        "a": {
+                            "type": "cos",
+                            "a": "x"
+                        },
+                        "b": 2
+                    },
+                    "b": {
+                        "type": "pow",
+                        "a": {
+                            "type": "sin",
+                            "a": "x"
+                        },
+                        "b": 2
+                    }
+                }
+            }
+        },
+        "goal": 1
+    }
+]

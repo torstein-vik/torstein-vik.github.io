@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Infintude of Primes",
+        "states": {
+            "init": {
+                "have": [],
+                "know": [],
+                "goal": ["For all N, there exists p > N such that p is prime"],
+                "directions": [
+                    {
+                        "name": "Pick an N",
+                        "goto": "introed"
+                    },
+                    {
+                        "name": "Split by cases",
+                        "error": "I don't understand, there is nothing to do cases on"
+                    },
+                    {
+                        "name": "By contradiction",
+                        "error": "Good idea, not implemented yet"
+                    },
+                    {
+                        "name": "By contrapositive",
+                        "error": "Contrapositive can only be used when trying to prove an implication"
+                    }
+                ]
+            },
+            "introed": {
+                "have": ["N, a natural number"],
+                "know": [],
+                "goal": ["There exists p > N such that p is prime"],
+                "directions": [
+                    {
+                        "name": "Feed in a number",
+                        "directions": [
+                            {
+                                "name": "N factorial",
+                                "error": "N factorial is not always prime"
+                            },
+                            {
+                                "name": "N factorial + 1",
+                                "error": "This is not always prime, take 6, but 721 is not prime"
+                            },
+                            {
+                                "name": "The minimal factor of N factorial + 1",
+                                "goto": "pChosen"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pChosen": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)"],
+                "goal": ["p > N and p is prime"],
+                "directions": [
+                    {
+                        "name": "Split the 'and' into two goals",
+                        "goto": "split"
+                    }
+                ]
+            },
+            "split": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)"],
+                "goal": ["p is prime", "p > N"],
+                "directions": [
+                    {
+                        "name": "Use a theorem",
+                        "directions": [
+                            {
+                                "name": "The minimal factor of a number is always a prime",
+                                "goto": "pprimeDone" 
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pprimeDone": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)"],
+                "goal": ["p > N"],
+                "directions": [
+                    {
+                        "name": "By contradiction",
+                        "goto": "pGreaterContradiction"
+                    }
+                ]
+            },
+            "pGreaterContradiction": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)", "p <= N"],
+                "goal": ["Contradiction"],
+                "directions": [
+                    {
+                        "name": "Notice a fact",
+                        "directions": [
+                            {
+                                "name": "p divides N! + 1 because p is the minimal factor",
+                                "goto": "pGreaterContradictionHave1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pGreaterContradictionHave1": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)", "p <= N", "p | N! + 1"],
+                "goal": ["Contradiction"],
+                "directions": [
+                    {
+                        "name": "Notice a fact",
+                        "directions": [
+                            {
+                                "name": "p divides N! because p <= N",
+                                "goto": "pGreaterContradictionHave2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pGreaterContradictionHave2": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)", "p <= N", "p | N! + 1", "p | N!"],
+                "goal": ["Contradiction"],
+                "directions": [
+                    {
+                        "name": "Notice a fact",
+                        "directions": [
+                            {
+                                "name": "p divides 1 because it divides two things that differ by 1",
+                                "goto": "pGreaterContradictionHave3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pGreaterContradictionHave3": {
+                "have": ["N, a natural number", "p, a natural number"],
+                "know": ["p = minfac (N! + 1)", "p <= N", "p | N! + 1", "p | N!", "p | 1"],
+                "goal": ["Contradiction"],
+                "directions": [
+                    {
+                        "name": "Use a theorem",
+                        "directions": [
+                            {
+                                "name": "A prime cannot divide one",
+                                "goto": "done"
+                            }
+                        ]
+                    }
+                ]
+            }
+        } 
+    }
+]

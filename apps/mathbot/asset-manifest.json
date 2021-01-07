@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/apps/mathbot/static/css/main.c8498bf7.chunk.css",
+    "main.js": "/apps/mathbot/static/js/main.80cca991.chunk.js",
+    "main.js.map": "/apps/mathbot/static/js/main.80cca991.chunk.js.map",
+    "runtime-main.js": "/apps/mathbot/static/js/runtime-main.60b15bd4.js",
+    "runtime-main.js.map": "/apps/mathbot/static/js/runtime-main.60b15bd4.js.map",
+    "static/js/2.0719ab9f.chunk.js": "/apps/mathbot/static/js/2.0719ab9f.chunk.js",
+    "static/js/2.0719ab9f.chunk.js.map": "/apps/mathbot/static/js/2.0719ab9f.chunk.js.map",
+    "static/js/3.17cbb3cc.chunk.js": "/apps/mathbot/static/js/3.17cbb3cc.chunk.js",
+    "static/js/3.17cbb3cc.chunk.js.map": "/apps/mathbot/static/js/3.17cbb3cc.chunk.js.map",
+    "index.html": "/apps/mathbot/index.html",
+    "static/css/main.c8498bf7.chunk.css.map": "/apps/mathbot/static/css/main.c8498bf7.chunk.css.map",
+    "static/js/2.0719ab9f.chunk.js.LICENSE.txt": "/apps/mathbot/static/js/2.0719ab9f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60b15bd4.js",
+    "static/js/2.0719ab9f.chunk.js",
+    "static/css/main.c8498bf7.chunk.css",
+    "static/js/main.80cca991.chunk.js"
+  ]
+}
