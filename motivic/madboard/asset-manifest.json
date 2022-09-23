@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a531ed1a.css",
+    "main.js": "./static/js/main.2dbb59c2.js",
+    "static/js/787.c57dd97f.chunk.js": "./static/js/787.c57dd97f.chunk.js",
+    "static/media/largemap.png": "./static/media/largemap.5f8810501a4c04fb33ee.png",
+    "static/media/background.png": "./static/media/background.603b31c1608584f52a01.png",
+    "static/media/smallmap.png": "./static/media/smallmap.3124c014ae6e242a9e96.png",
+    "static/media/image.png": "./static/media/image.4dbb20c6392070bed907.png",
+    "static/media/specimen.png": "./static/media/specimen.c652be6982584af623d2.png",
+    "static/media/machine.png": "./static/media/machine.12ac6529ced9368817ba.png",
+    "static/media/challenge.png": "./static/media/challenge.4e3823ce087465dec794.png",
+    "static/media/definition.png": "./static/media/definition.cedcc29bf154cc3d9e69.png",
+    "static/media/connection.png": "./static/media/connection.b481fbb5aaadfd697963.png",
+    "static/media/story.png": "./static/media/story.afa121656f6899214b08.png",
+    "static/media/rep.png": "./static/media/rep.8a0deff7bf6d834e0755.png",
+    "static/media/statement.png": "./static/media/statement.3a10eee9af3db62da136.png",
+    "static/media/localcard.png": "./static/media/localcard.b533c371876e3880ee15.png",
+    "static/media/agent.png": "./static/media/agent.d1770c86373e267059ba.png",
+    "static/media/reference.png": "./static/media/reference.c8caeefc25166103e131.png",
+    "static/media/value.png": "./static/media/value.abec3f08d7f0c14b754b.png",
+    "static/media/phenomenon.png": "./static/media/phenomenon.bd5aa3c92e70ceb634b2.png",
+    "static/media/strategy.png": "./static/media/strategy.6d57aa47bf6ab57126ff.png",
+    "static/media/activity.png": "./static/media/activity.9d2be960492499614529.png",
+    "static/media/builder.png": "./static/media/builder.61dba96dabd2b20cacb4.png",
+    "static/media/flavor.png": "./static/media/flavor.c278a654ad1dc2cfa0bf.png",
+    "static/media/formalization.png": "./static/media/formalization.372298d73927501528c2.png",
+    "static/media/globalcard.png": "./static/media/globalcard.83a461f4fcace5707a93.png",
+    "index.html": "./index.html",
+    "main.a531ed1a.css.map": "./static/css/main.a531ed1a.css.map",
+    "main.2dbb59c2.js.map": "./static/js/main.2dbb59c2.js.map",
+    "787.c57dd97f.chunk.js.map": "./static/js/787.c57dd97f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a531ed1a.css",
+    "static/js/main.2dbb59c2.js"
+  ]
+}
